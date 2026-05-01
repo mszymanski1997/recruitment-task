@@ -1,6 +1,12 @@
 import './globals.scss';
 import Header from '@/components/Header/Header';
 import { CartProvider } from '@/store/CartProvider';
+import { Inter } from 'next/font/google';
+
+const inter = Inter({ 
+  subsets: ['latin'],
+  display: 'swap', 
+});
 
 export default function RootLayout({
 	children,
@@ -9,7 +15,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang='en'>
-			<body>
+			<body className={inter.className}>
 				<CartProvider>
 					<Header />
 					{children}
