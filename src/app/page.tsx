@@ -1,36 +1,31 @@
 import ProductCard from '@/components/ProductCard/ProductCard';
+import { getAppData } from '@/services/productService';
+import { ProductCardProps } from '@/types/types';
 
-export default function Home() {
+export default async function Home() {
+	const data = await getAppData();
+	const { products } = data;
+
 	return (
 		<main className='container'>
 			<div className='flexWrapper'>
-				<ProductCard
-					articleNumber='11111'
-					image={{
-						altText: 'Gigachad',
-						url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUZTRO0pek-8nowBkGIcPz7168stMF1c0e0A&s',
-					}}
-					title='Classic Chad'
-					description='Very handsome and strong.'
-					brandName='Handsome Inc.'
-					price={150}
-				/>
+				{products.map((product: ProductCardProps) => (
+					<div key={product.articleNumber} className='cardWrapper'>
+						<ProductCard
+							articleNumber={product.articleNumber}
+							image={{
+								altText: product.image.altText,
 
-				<ProductCard
-					articleNumber='22222'
-					image={{
-						altText: 'Super Chad',
-						url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUZTRO0pek-8nowBkGIcPz7168stMF1c0e0A&s',
-					}}
-					title='Premium Chad'
-					description='Even more handsome with an exclusive discount!'
-					brandName='Handsome Inc.'
-					price={200}
-					promotion={{
-						name: 'Black Friday',
-						percentage: 20,
-					}}
-				/>
+								url: product.image.url,
+							}}
+							title={product.title}
+							description={product.description}
+							brandName={product.brandName}
+							price={product.price}
+							promotion={product.promotion}
+						/>
+					</div>
+				))}
 			</div>
 		</main>
 	);
