@@ -19,41 +19,6 @@
 			border-radius: 4px;
 		}
 	}
-
-	.cart {
-		position: relative;
-		display: flex;
-		align-items: center;
-		cursor: pointer;
-		padding: 8px;
-		transition: transform 0.2s ease;
-
-		&:hover {
-			transform: scale(1.1);
-		}
-
-		svg {
-			color: #1f2937;
-		}
-
-		.badge {
-			position: absolute;
-			top: 0;
-			right: 0;
-			background-color: #2563eb;
-			color: white;
-			font-size: 0.7rem;
-			font-weight: bold;
-			min-width: 18px;
-			height: 18px;
-			border-radius: 50%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			padding: 2px;
-			border: 2px solid #ffffff;
-		}
-	}
 }
 
 @media (max-width: 640px) {

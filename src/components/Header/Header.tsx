@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import { FiShoppingCart } from 'react-icons/fi';
 import styles from './Header.module.scss';
 import { getAppData } from '@/services/productService';
+import CartBadge from '../CartBadge/CartBadge';
 
 const Header = async () => {
 	const data = await getAppData();
@@ -18,10 +18,7 @@ const Header = async () => {
 				/>
 			</div>
 
-			<div className={styles.cart}>
-				<FiShoppingCart size={24} />
-				<span className={styles.badge}>0</span>
-			</div>
+			<CartBadge />
 		</header>
 	);
 };

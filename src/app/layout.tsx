@@ -1,5 +1,6 @@
 import './globals.scss';
 import Header from '@/components/Header/Header';
+import { CartProvider } from '@/store/CartProvider';
 
 export default function RootLayout({
 	children,
@@ -9,8 +10,10 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body>
-				<Header />
-				{children}
+				<CartProvider>
+					<Header />
+					{children}
+				</CartProvider>
 			</body>
 		</html>
 	);
