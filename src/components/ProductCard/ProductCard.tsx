@@ -20,7 +20,12 @@ const ProductCard = ({
 	return (
 		<article className={styles.card}>
 			<div className={styles.imageWrapper}>
-				<Image src={image.url} alt={image.altText} fill />
+				<Image
+					src={image.url}
+					alt={image.altText}
+					fill
+					sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw'
+				/>
 			</div>
 
 			<div className={styles.content}>
