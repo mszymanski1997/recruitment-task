@@ -5,6 +5,7 @@ import { getAppData } from '@/services/productService';
 
 const Header = async () => {
 	const data = await getAppData();
+	console.log(data);
 
 	return (
 		<header className={styles.header}>
