@@ -8,6 +8,7 @@ export default async function Home() {
 
 	return (
 		<main className='container'>
+			<h1 className='headline'>Our Products</h1>
 			<div className='flexWrapper'>
 				{products.map((product: ProductCardProps) => (
 					<div key={product.articleNumber} className='cardWrapper'>

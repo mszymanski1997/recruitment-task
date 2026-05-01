@@ -28,6 +28,14 @@ body {
 	display: flex;
 }
 
+.headline {
+	text-align: center;
+	margin: 2rem 0;
+	font-size: 2.5rem;
+	font-weight: 800;
+	color: #1a1a1a;
+}
+
 @media (max-width: 1024px) {
 	.cardWrapper {
 		flex: 0 1 calc(50% - 1rem);
