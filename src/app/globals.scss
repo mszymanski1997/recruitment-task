@@ -16,11 +16,30 @@ body {
 
 .flexWrapper {
 	display: flex;
-	// flex-wrap: wrap;
-	justify-content: center;
+	flex-wrap: wrap;
+	justify-content: flex-start;
 	gap: 2rem;
 	max-width: 1200px;
 	margin: 0 auto;
 }
 
+.cardWrapper {
+	flex: 0 1 calc(33.333% - 1.35rem);
+	display: flex;
+}
 
+@media (max-width: 1024px) {
+	.cardWrapper {
+		flex: 0 1 calc(50% - 1rem);
+	}
+}
+
+@media (max-width: 650px) {
+	.cardWrapper {
+		flex: 0 1 100%;
+	}
+
+	.flexWrapper {
+		justify-content: center;
+	}
+}
