@@ -5,19 +5,13 @@ import { CartContext } from './CartContext';
 
 export const CartProvider = ({ children }: { children: React.ReactNode }) => {
 	const [cartCount, setCartCount] = useState(0);
-	const [isAdding, setIsAdding] = useState(false);
 
 	const addToCart = async () => {
-		setIsAdding(true);
-
-		setTimeout(() => {
-			setCartCount((prevCount) => prevCount + 1);
-			setIsAdding(false);
-		}, 1000);
+		setCartCount((prevCount) => prevCount + 1);
 	};
 
 	return (
-		<CartContext.Provider value={{ cartCount, addToCart, isAdding }}>
+		<CartContext.Provider value={{ cartCount, addToCart }}>
 			{children}
 		</CartContext.Provider>
 	);
