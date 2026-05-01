@@ -1,4 +1,5 @@
 import styles from './ProductCard.module.scss';
+import Image from 'next/image';
 import { ProductCardProps } from '@/types/types';
 
 const ProductCard = ({
@@ -18,7 +19,7 @@ const ProductCard = ({
 	return (
 		<article className={styles.card}>
 			<div className={styles.imageWrapper}>
-				<img src={image.url} alt={image.altText} />
+				<Image src={image.url} alt={image.altText} fill />
 			</div>
 
 			<div className={styles.content}>
