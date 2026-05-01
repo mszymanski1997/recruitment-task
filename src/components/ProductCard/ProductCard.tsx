@@ -1,6 +1,7 @@
 import styles from './ProductCard.module.scss';
 import Image from 'next/image';
 import { ProductCardProps } from '@/types/types';
+import AddToCartButton from '../AddToCartButton/AddToCartButton';
 
 const ProductCard = ({
 	image,
@@ -41,7 +42,7 @@ const ProductCard = ({
 					)}
 				</div>
 
-				<button className={styles.button}>Add to Cart</button>
+				<AddToCartButton />
 			</div>
 		</article>
 	);
