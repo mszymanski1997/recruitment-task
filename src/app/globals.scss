@@ -5,5 +5,22 @@
 }
 
 body {
-	background-color: #F9FAFB;
+	background-color: #f9fafb;
 }
+
+.container {
+	background-color: #f8f9fa;
+	min-height: 100vh;
+	padding: 40px 20px;
+}
+
+.flexWrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 2rem;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+

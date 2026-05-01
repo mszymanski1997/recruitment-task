@@ -1,3 +1,7 @@
 export default function Home() {
-	return <p>Lets get started!</p>;
+	return (
+		<main className='container'>
+			<div className='flexWrapper'></div>
+		</main>
+	);
 }
